@@ -4,10 +4,10 @@ let Height = 3300
 let img;
 
 function preload (){
-  img = loadImage(assests/background.jpg)
+  img = loadImage("assets/Background.jpg")
 }
 function setup() {
-  createCanvas(CanvasWidth, CanvasHeight);
+  createCanvas("CanvasWidth, CanvasHeight");
 }
 
 function draw() {
