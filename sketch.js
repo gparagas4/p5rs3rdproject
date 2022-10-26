@@ -1,16 +1,24 @@
-let Width = 5100
-let Height = 3300
+let canvasWidth = 3000;
+let canvasHeight = 2000;
+let x = 0;
 
-let img;
 
-function preload (){
-  img = loadImage("assets/Background.jpg")
-}
 function setup() {
-  createCanvas("CanvasWidth, CanvasHeight");
+  createCanvas(canvasWidth, canvasHeight);
 }
-
 function draw() {
-  background(125);
-  image (img, 0, 0)
+
+background ("skyblue")
+  ellipse(1800, 55, 70)
+  fill("yellow")
+  noStroke()
+
+
+    rect(1800, 90, 250, 20)
+    floor.rotation = 2;
+    fill("purple")
+    noStroke()
+
+   
+  
 }
