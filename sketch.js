@@ -1,41 +1,68 @@
-let canvasWidth = 2175;
+let canvasWidth = 2200;
 let canvasHeight = 2000;
 let x = 0;
-let rectSize = 30;
 let goingForward = true;
+
 
 
 function setup() {
   createCanvas(canvasWidth, canvasHeight);
-  rectMode(CENTER);
+  background ("skyblue")
+
 
 }
 function draw() {
-  background ("skyblue")
-  ellipse(1800, 45, 70)
-  color ("purple")
+  background("skyblue");
+
+  
+  fill("blue")
   noStroke()
-    
+  circle(2100, 65, 70);
 
-  rect(2000, 100, 400, 35)
 
-  rect(100, 185, 400, 35)
-  if (x=canvasWidth) {
+  fill("brown")
+  noStroke()
+  rect(1800, 100, 400, 85);
+  
+
+  if (goingForward) {
     x++;
   } else {
     x--;
   }
 
   if (x == canvasWidth){
- goingForward = false;
-  }
-  if (x== 0){
-    goingForward = true;
+    goingForward = false;
   }
 
-    rect(x, canvasHeight/2, 30, 30)
+  if (x == 0){
+     goingForward = true;
+    }
+
+  if (-x == 2175){
+    goingForward = false;
   }
 
+  fill("purple")
+  noStroke()
+  rect( x, 350, 600, 70, 200);
 
- 
+    fill("black")
+    noStroke()
+    rect(x, 700, 600, 70, 200);
+
+  fill("red")
+  noStroke()
+  rect( x, 1050, 600, 70, 200);
+
+
+    fill("yellow")
+    noStroke()
+    rect(x, 1400, 600, 70, 200)
+
+
+
+  
+  
+}
 
