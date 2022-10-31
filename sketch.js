@@ -1,18 +1,18 @@
 let canvasWidth = 2200;
 let canvasHeight = 2000;
-let x = 0;
-let goingForward = true;
-let ArrowLeft = moveLeft;
-let ArrowRight = moveRight;
-
-
+let horizontalPositionOdd = 0;
+let horizontalPositionEven = canvasWidth;
+let goingForwardOdd = true;
+let goingForwardEven = false;
+// let ArrowLeft = moveLeft;
+// let ArrowRight = moveRight;
+const speed = 10;
 
 function setup() {
   createCanvas(canvasWidth, canvasHeight);
   background ("skyblue")
-
-
 }
+
 function draw() {
   background("skyblue");
 
@@ -20,46 +20,44 @@ function draw() {
   noStroke()
   circle(2100, 65, 70);
 
-
   fill("brown")
   noStroke()
   rect(1800, 100, 400, 85);
   
+  // this is for the odd ones...
 
-  if (goingForward) {
-    x++;
-  } else {
-    x--;
-  }
+  if (goingForwardOdd == true) { horizontalPositionOdd += speed } 
+  else { horizontalPositionOdd -= speed }
 
-  if (x == canvasWidth){
-    goingForward = false;
-  }
+  if (horizontalPositionOdd <= 0) goingForwardOdd = true;
+  if (horizontalPositionOdd >= canvasWidth) goingForwardOdd = false;
 
-  if (x == 0){
-     goingForward = true;
-    }
+  // this is for the EVEN ones...
+  
+  if (goingForwardEven == true) { horizontalPositionEven += speed } 
+  else { horizontalPositionEven -= speed }
 
-  if (-x == 2175){
-    goingForward = false;
-  }
+  if (horizontalPositionEven <= 0) goingForwardEven = true;
+  if (horizontalPositionEven >= canvasWidth) goingForwardEven = false;
+
+
 
   fill("purple")
   noStroke()
-  rect( x, 350, 600, 70, 200);
+  rect( horizontalPositionOdd, 350, 600, 70, 200);
 
     fill("black")
     noStroke()
-    rect(x, 700, 600, 70, 200);
+    rect(horizontalPositionEven, 700, 600, 70, 200);
 
   fill("red")
   noStroke()
-  rect( x, 1050, 600, 70, 200);
+  rect( horizontalPositionOdd, 1050, 600, 70, 200);
 
 
     fill("yellow")
     noStroke()
-    rect(x, 1400, 600, 70, 200)
+    rect(horizontalPositionEven, 1400, 600, 70, 200)
 
 
 
