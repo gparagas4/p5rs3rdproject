@@ -2,6 +2,8 @@ let canvasWidth = 2200;
 let canvasHeight = 2000;
 let x = 0;
 let goingForward = true;
+let ArrowLeft = moveLeft;
+let ArrowRight = moveRight;
 
 
 
@@ -14,7 +16,6 @@ function setup() {
 function draw() {
   background("skyblue");
 
-  
   fill("blue")
   noStroke()
   circle(2100, 65, 70);
