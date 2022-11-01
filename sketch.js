@@ -16,7 +16,7 @@ function setup() {
 function draw() {
   background("skyblue");
 
-  fill("blue")
+  fill("darkblue")
   noStroke()
   circle(2100, 55, 70);
 
