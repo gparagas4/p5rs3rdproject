@@ -20,13 +20,6 @@ function draw() {
   noStroke()
   circle(2100, 65, 70);
 
-  fill("brown")
-  noStroke()
-  rect(3000, 100, 400, 85);
-
-  fill("white")
-  noStroke()
-  rect(1200, 1800, 800, 75);
   
   // this is for the odd ones...
 
@@ -45,26 +38,31 @@ function draw() {
   if (horizontalPositionEven >= canvasWidth) goingForwardEven = false;
 
 
+  fill("brown")
+  noStroke()
+  rect(horizontalPositionEven,100, 800, 70, 200)
 
   fill("purple")
   noStroke()
-  rect( horizontalPositionOdd, 350, 600, 70, 200);
+  rect( horizontalPositionOdd, 350, 800, 70, 200);
 
     fill("black")
     noStroke()
-    rect(horizontalPositionEven, 700, 600, 70, 200);
+    rect(horizontalPositionEven, 700, 800, 70, 200);
 
   fill("red")
   noStroke()
-  rect( horizontalPositionOdd, 1050, 600, 70, 200);
+  rect( horizontalPositionOdd, 1050, 800, 70, 200);
 
 
     fill("yellow")
     noStroke()
-    rect(horizontalPositionEven, 1400, 600, 70, 200)
+    rect(horizontalPositionEven, 1400, 800, 70, 200)
 
 
-  
+    fill("white")
+    noStroke()
+    rect(horizontalPositionOdd, 1750, 800, 70, 200);
   
   
 }
