@@ -18,8 +18,11 @@ function draw() {
 
   fill("blue")
   noStroke()
-  circle(2100, 65, 70);
+  circle(2100, 55, 70);
 
+  fill("brown")
+  noStroke()
+  rect(1500, 90, 700, 30, 200)
   
   // this is for the odd ones...
 
@@ -37,10 +40,6 @@ function draw() {
   if (horizontalPositionEven <= 0) goingForwardEven = true;
   if (horizontalPositionEven >= canvasWidth) goingForwardEven = false;
 
-
-  fill("brown")
-  noStroke()
-  rect(horizontalPositionEven,100, 800, 70, 200)
 
   fill("purple")
   noStroke()
