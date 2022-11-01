@@ -1,4 +1,4 @@
-let canvasWidth = 2200;
+let canvasWidth = 3400;
 let canvasHeight = 2000;
 let horizontalPositionOdd = 0;
 let horizontalPositionEven = canvasWidth;
@@ -6,7 +6,7 @@ let goingForwardOdd = true;
 let goingForwardEven = false;
 // let ArrowLeft = moveLeft;
 // let ArrowRight = moveRight;
-const speed = 10;
+const speed = 8;
 
 function setup() {
   createCanvas(canvasWidth, canvasHeight);
@@ -22,7 +22,11 @@ function draw() {
 
   fill("brown")
   noStroke()
-  rect(1800, 100, 400, 85);
+  rect(3000, 100, 400, 85);
+
+  fill("white")
+  noStroke()
+  rect(1200, 1800, 800, 75);
   
   // this is for the odd ones...
 
@@ -60,7 +64,7 @@ function draw() {
     rect(horizontalPositionEven, 1400, 600, 70, 200)
 
 
-
+  
   
   
 }
