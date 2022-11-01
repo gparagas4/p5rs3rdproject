@@ -41,7 +41,7 @@ function draw() {
   if (horizontalPositionEven >= canvasWidth) goingForwardEven = false;
 
 
-  fill("purple")
+  fill("darkgreen")
   noStroke()
   rect( horizontalPositionOdd, 350, 800, 70, 200);
 
