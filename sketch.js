@@ -1,4 +1,4 @@
-let canvasWidth = 3400;
+let canvasWidth = 2500;
 let canvasHeight = 2000;
 let horizontalPositionOdd = 0;
 let horizontalPositionEven = canvasWidth;
