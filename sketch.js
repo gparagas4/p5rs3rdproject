@@ -1,28 +1,27 @@
-let canvasWidth = 2500;
+let canvasWidth = 3500;
 let canvasHeight = 2000;
 let horizontalPositionOdd = 0;
 let horizontalPositionEven = canvasWidth;
 let goingForwardOdd = true;
 let goingForwardEven = false;
-// let ArrowLeft = moveLeft;
-// let ArrowRight = moveRight;
+let ArrowLeft = true;
+let ArrowRight = false;
+
 const speed = 8;
 
 function setup() {
   createCanvas(canvasWidth, canvasHeight);
   background ("skyblue")
+  
 }
 
 function draw() {
   background("skyblue");
 
-  fill("darkblue")
-  noStroke()
-  circle(2100, 55, 70);
-
   fill("brown")
   noStroke()
-  rect(1500, 90, 700, 30, 200)
+  rect(1300, 90, 700, 30, 200)
+ 
   
   // this is for the odd ones...
 
@@ -62,6 +61,10 @@ function draw() {
     fill("white")
     noStroke()
     rect(horizontalPositionOdd, 1750, 800, 70, 200);
+
+    //this is for the round circle movement 
+
+
   
   
 }
